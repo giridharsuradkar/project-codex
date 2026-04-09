@@ -8,6 +8,7 @@ const classroomRoutes = require("./routes/classroomRoutes");
 const allocationRoutes = require("./routes/allocationRoutes");
 const facultyRoutes = require("./routes/facultyRoutes");
 const studentRoutes = require("./routes/studentRoutes");
+const scheduleRoutes = require("./routes/scheduleRoutes");
 const { errorHandler } = require("./middlewares/errorMiddleware");
 
 const app = express();
@@ -26,6 +27,7 @@ app.use("/api/classrooms", classroomRoutes);
 app.use("/api/allocations", allocationRoutes);
 app.use("/api/faculty", facultyRoutes);
 app.use("/api/student", studentRoutes);
+app.use("/api/schedules", scheduleRoutes);
 
 app.use(errorHandler);
 

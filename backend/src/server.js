@@ -1,7 +1,9 @@
 const path = require("path");
+
 require("dotenv").config({
-  path: path.resolve(__dirname, "../../.env")
+  path: path.resolve(__dirname, "../.env") // ✅ FIXED
 });
+
 const app = require("./app");
 
 const PORT = process.env.PORT || 5000;
